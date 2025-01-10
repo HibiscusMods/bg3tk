@@ -1,5 +1,10 @@
 [tools]
-go = "1.24rc1"
+go = "1.23"
+python = "3.13.1"
+"pipx:robotframework" = "7.1.1"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
 
 [tasks."bg3vcs"]
 run = "echo 'Running bg3vcs cli'"
