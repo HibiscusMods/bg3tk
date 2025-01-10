@@ -1,0 +1,18 @@
+##### Deny all by default
+*
+
+##### Allow specific files
+
+## Git configuration
+!.gitignore
+
+## go workspace
+!go.work
+!go.work.sum
+
+## Repository documentation
+!README.md
+!LICENSE
+
+## Mise configuration
+!mise.toml
