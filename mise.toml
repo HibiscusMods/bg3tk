@@ -1,2 +1,15 @@
 [tools]
-go = "1.23"
+go = "1.24rc1"
+
+[tasks."bg3vcs"]
+run = "echo 'Running bg3vcs cli'"
+
+[tasks."bg3vcs:lint"]
+run = "echo 'Linting bg3vcs'"
+
+[tasks."bg3vcs:test"]
+run = "echo 'Running bg3vcs tests'"
+
+[tasks."bg3vcs:ci"]
+depends = ['bg3vcs:lint', 'bg3vcs:test']
+run = "echo 'Running ci for bg3vcs'"

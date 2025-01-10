@@ -1,18 +1,18 @@
 ##### Deny all by default
 *
 
-##### Allow subprojects
+##### Allow subfolders
 !*/
-!*/.gitignore
 
 ##### Allow specific files
 
 ## Git configuration
 !.gitignore
 
-## go workspace
-!go.work
-!go.work.sum
+## go 
+!go.mod
+!go.sum
+!*.go
 
 ## Repository documentation
 !README.md
