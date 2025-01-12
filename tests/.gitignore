@@ -9,16 +9,9 @@
 ## Git configuration
 !.gitignore
 
-## go 
-!go.mod
-!go.sum
-!*.go
-
-## Repository documentation
-!README.md
-!LICENSE
-
 ## Mise tasks configuration
-!mise.toml
 !tasks.toml
-!tasks/*
+
+## E2E Tests
+!**/*.robot
+!tools/testdata/*.md

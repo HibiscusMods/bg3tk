@@ -1,0 +1,13 @@
+["bootstrap:tools"]
+description = "Install the dependencies required to work with tools"
+depends = ["tools:bootstrap:*"]
+
+["tools:mdgen"]
+description = "Run mdgen"
+run = "tools/mdgen/.venv/Scripts/python -m mdgen"
+run_windows = "python -m mdgen"
+
+["tools:bootstrap:mdgen"]
+hide = true
+dir = "tools/mdgen"
+run = "uv pip install -e .[test]"

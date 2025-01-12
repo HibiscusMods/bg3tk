@@ -1,0 +1,9 @@
+["test:e2e"]
+depends = ["test:e2e:*"]
+
+["test:e2e:tools"]
+hide = true
+dir = "tests"
+description = "Run e2e tests for tools"
+run = ["mkdir -p ../output", "robot ./tools -d ../output"]
+run_windows = ["robot -d ../output ./tools"]

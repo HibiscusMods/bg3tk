@@ -1,20 +1,38 @@
+min_version = "2025.1.4"
+
 [tools]
 go = "1.23"
-python = "3.13.1"
+python = { version = "3.13.1", virtualenv = ".venv" }
 "pipx:robotframework" = "7.1.1"
 
-[env]
-_.python.venv = { path = ".venv", create = true }
+[task_config]
+includes = ["bg3vcs/tasks.toml", "tests/tasks.toml", "tools/tasks.toml"]
 
-[tasks."bg3vcs"]
-run = "echo 'Running bg3vcs cli'"
+[env.'_'.python.venv]
+python = 'C:\Users\User\AppData\Local\mise\installs\python\3.13.1\python.exe'
+path = ".venv"
+create = true
 
-[tasks."bg3vcs:lint"]
-run = "echo 'Linting bg3vcs'"
+[tasks.bootstrap]
+description = "Install dependencies for all projects. To install dependencies for a specific project use `mise run bootstrap:<project>`."
+depends = ["bootstrap:*"]
 
-[tasks."bg3vcs:test"]
-run = "echo 'Running bg3vcs tests'"
+[tasks.lint]
+description = "Run linters for all projects. To run tests for a specific project use `mise run lint:<project>`."
+depends = ["lint:*"]
 
-[tasks."bg3vcs:ci"]
-depends = ['bg3vcs:lint', 'bg3vcs:test']
-run = "echo 'Running ci for bg3vcs'"
+[tasks.test]
+description = "Run tests for all projects. To run tests for a specific project use `mise run test:<project>`."
+depends = ["test:*"]
+
+[tasks.ci]
+description = "Run the ci/cd pipeline for all projects. To run ci/cd for a specific project use `mise run ci:<project>`."
+depends = ["lint", "test"]
+
+[tasks.install]
+description = "Install all projects. To install a specific project use `mise run install:<project>`."
+depends = ["install:*"]
+
+[tasks.gen]
+description = "Run generation tasks for all projects. To run generation for a specific project use `mise run gen:<project>`."
+depends = ["gen:*"]

@@ -1,0 +1,17 @@
+##### Deny all by default
+*
+
+##### Allow specific files
+
+## Allow git configuration
+!.gitignore
+
+## Allow mdgen
+!mdgen
+
+## Allow templates
+!templates
+!templates/*.tmpl
+
+## Allow tasks
+!tasks.toml

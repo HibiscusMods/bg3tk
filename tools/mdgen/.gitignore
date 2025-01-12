@@ -1,0 +1,17 @@
+##### Deny all by default
+*
+
+##### Allow subfolders
+!*/
+
+##### Allow specific files
+!README.md
+
+## Git configuration
+!.gitignore
+
+## Config
+!*.toml
+
+## Python
+!*.py

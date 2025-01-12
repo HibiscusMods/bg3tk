@@ -1,0 +1,23 @@
+["lint:bg3vcs"]
+hide = true
+description = "Run linters for bg3vcs"
+run = "echo 'Linting bg3vcs...'"
+
+["test:bg3vcs"]
+hide = true
+depends = ["test:bg3vcs:*"]
+
+["ci:bg3vcs"]
+hide = true
+description = "Run ci/cd for bg3vcs"
+run = "echo 'Running ci/cd for bg3vcs...'"
+
+["install:bg3vcs"]
+hide = true
+description = "Install bg3vcs"
+run = "echo 'Installing bg3vcs...'"
+
+["test:bg3vcs:e2e"]
+hide = true
+description = "Run e2e tests for bg3vcs"
+run = "echo 'Testing bg3vcs...'"

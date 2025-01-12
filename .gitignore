@@ -1,11 +1,14 @@
 ##### Deny all by default
 *
 
-##### Allow subprojects
-!*/
-!*/.gitignore
-
 ##### Allow specific files
+
+## Allow subprojects
+!*/.gitignore
+!bg3vcs
+
+## Allow e2e tests
+!tests
 
 ## Git configuration
 !.gitignore
@@ -18,5 +21,12 @@
 !README.md
 !LICENSE
 
+## Tools
+!tools
+
 ## Mise configuration
 !mise.toml
+
+##### Deny specific files and folders
+output/*
+

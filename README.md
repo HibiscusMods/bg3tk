@@ -7,8 +7,20 @@ This monorepo contains tools and utilities for Baldur's Gate 3 modding.
 ### VCS Integration (`vcs-integration/`)
 A tool to manage the integration between the BG3 toolkit and version control systems. This module helps streamline the workflow between the BG3 toolkit and your preferred VCS.
 
-## Module URLs
+### Installation
 
-All modules are available under the `mods.hibiscusgames.com/bg3tk` namespace:
+The recommended installation method is using Winget or mise-en-place.
 
-- VCS Integration: `mods.hibiscusgames.com/bg3tk/vcs-integration`
+### Winget
+```sh
+# List available packages
+winget search HibiscusMods.BG3Toolkit
+
+# Install a package
+winget install HibiscusMods.BG3Toolkit.{{package}}
+```
+
+### mise-en-place
+```sh
+mise use go:mods.hibiscusgames.com/bg3tk/{{package}}
+```
